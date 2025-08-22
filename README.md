@@ -4,7 +4,8 @@ This repo consists of code examples of different topics as a reference for mysel
 
 ## Repo structure
 
-.
+```text
+References
 ├── C++
 │  
 ├── DSA
@@ -22,3 +23,4 @@ This repo consists of code examples of different topics as a reference for mysel
 ├── Built-in Modules
 │   └── pathlib
 └── Working with files
+```
