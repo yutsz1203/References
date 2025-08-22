@@ -10,6 +10,7 @@ References
 │  
 ├── DSA
 │   └── Tree
+│
 ├── Machine Learning
 │   ├── Models From Scratch
 │   │   └── Supervised Learning
@@ -19,6 +20,7 @@ References
 │       └── Supervised Learning
 │           └── Regression
 ├── OOP
+│
 └── Python
     ├── Built-in Modules
     │   └── pathlib
