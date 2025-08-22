@@ -13,14 +13,14 @@ References
 ├── Machine Learning
 │   ├── Models From Scratch
 │   │   └── Supervised Learning
-│   │   └── Regression
+│   │       └── Regression
 │   └── Practical Applications
-│   ├── Mixed
-│   └── Supervised Learning
-│   └── Regression
+│       ├── Mixed
+│       └── Supervised Learning
+│           └── Regression
 ├── OOP
 └── Python
-├── Built-in Modules
-│   └── pathlib
-└── Working with files
+    ├── Built-in Modules
+    │   └── pathlib
+    └── Working with files
 ```
