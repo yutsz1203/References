@@ -43,7 +43,8 @@ print(file_path)
 print(os.path.basename("/tmp/test.txt"))
 
 # get directory name
-print(os.path.dirname("/tmp/test.txt"))
+print(os.path.dirname("/tmp/test.txt")) # return: /tmp
+print(os.path.dirname(__file__)) # return: /Users/yutsz/Documents/References/Python/Built-in Modules/os
 
 # split path and file 
 path, filename = os.path.split("/tmp/test.txt")
@@ -67,4 +68,3 @@ print(extension)
 # check what methods exist
 print(dir(os.path))
 
-print(os.path.dirname(__file__))
