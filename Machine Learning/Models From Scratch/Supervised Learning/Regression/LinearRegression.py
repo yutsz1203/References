@@ -2,8 +2,8 @@
 # Applicable to both simple lienar regression (one variable) and multiple linear regression (multiple regressions)
 import numpy as np
 
-class LinearRegression:
 
+class LinearRegression:
     def __init__(self, lr=0.001, n_iters=1000):
         self.lr = lr
         self.n_iters = n_iters
@@ -20,8 +20,8 @@ class LinearRegression:
         for _ in range(self.n_iters):
             y_predicted = np.dot(X, self.weights) + self.bias
 
-            dw = (1/n_samples) * np.dot(X.T, (y_predicted - y))
-            db = (1/n_samples) * np.sum(y_predicted - y)
+            dw = (1 / n_samples) * np.dot(X.T, (y_predicted - y))
+            db = (1 / n_samples) * np.sum(y_predicted - y)
 
             self.weights -= self.lr * dw
             self.bias -= self.lr * db
@@ -30,16 +30,18 @@ class LinearRegression:
         y_approximated = np.dot(X, self.weights) + self.bias
         return y_approximated
 
+
 def r2_score(y_true, y_pred):
     corr_matrix = np.corrcoef(y_true, y_pred)
-    corr = corr_matrix[0,1]
-    return corr ** 2
+    corr = corr_matrix[0, 1]
+    return corr**2
+
 
 # Testing
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
-    from sklearn.model_selection import train_test_split
     from sklearn import datasets
+    from sklearn.model_selection import train_test_split
 
     def mean_squared_error(y_true, y_pred):
         return np.mean((y_true - y_pred) ** 2)
@@ -64,7 +66,7 @@ if __name__ == "__main__":
 
     y_pred_line = regressor.predict(X)
     cmap = plt.get_cmap("viridis")
-    fig = plt.figure(figsize=(8,6))
+    fig = plt.figure(figsize=(8, 6))
     m1 = plt.scatter(X_train, y_train, color=cmap(0.9), s=10)
     m2 = plt.scatter(X_test, y_test, color=cmap(0.5), s=10)
     plt.plot(X, y_pred_line, color="black", linewidth=2, label="Predictions")

@@ -1,23 +1,25 @@
 # Reference: https://www.youtube.com/watch?v=ngLyX54e1LU&list=PLqnslRFeH2Upcrywf-u2etjdxxkL8nl7E&index=1
-import numpy as np
-import matplotlib.pyplot as plt
 from collections import Counter
 
+import matplotlib.pyplot as plt
+import numpy as np
+
+
 def euclidean_distance(x1, x2):
-    return np.sqrt(np.sum((x1-x2)**2))
+    return np.sqrt(np.sum((x1 - x2) ** 2))
+
 
 class KNN:
-
     def __init__(self, k=3):
         self.k = k
-    
+
     def fit(self, X, y):
         self.X_train = X
         self.y_train = y
 
     def predict(self, X):
         predicted_labels = [self._predict(x) for x in X]
-        return np.array(predicted_labels)    
+        return np.array(predicted_labels)
 
     # helper function
     def _predict(self, x):
@@ -32,6 +34,7 @@ class KNN:
         most_common = Counter(k_nearest_labels).most_common(1)
         return most_common[0][0]
 
+
 if __name__ == "__main__":
     from matplotlib.colors import ListedColormap
     from sklearn import datasets
@@ -42,7 +45,7 @@ if __name__ == "__main__":
     def accuracy(y_true, y_pred):
         accuracy = np.sum(y_true == y_pred) / len(y_true)
         return accuracy
-    
+
     iris = datasets.load_iris()
     X, y = iris.data, iris.target
 
