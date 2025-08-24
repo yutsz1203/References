@@ -1,26 +1,19 @@
 # Leetcode 104. Maximum Depth of Binary Tree
-# Definition for a binary tree node.
+from Tree import TreeNode
 
-class TreeNode:
-	def __init__(self, val=0, left=None, right=None):
-		self.val = val
-		self.left = left
-		self.right = right
 
 class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        if root is None:
+            return 0
+        res = 0
+        stack = [[root, 1]]
 
-	def maxDepth(self, root: TreeNode) -> int:
-	
-		if root is None:
-			return 0; 
-		res = 0
-		stack = [[root, 1]]
-		
-		while stack:
-			node, depth = stack.pop()
-			
-			if node:
-				res = max(res, depth)
-				stack.append([node.left, depth+1])	
-				stack.append([node.right, depth + 1])
-		return res
+        while stack:
+            node, depth = stack.pop()
+
+            if node:
+                res = max(res, depth)
+                stack.append([node.left, depth + 1])
+                stack.append([node.right, depth + 1])
+        return res
