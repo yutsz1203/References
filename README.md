@@ -17,6 +17,7 @@ References
 ├── Machine Learning
 │   ├── Models From Scratch
 │   │   └── Supervised Learning
+│   │       └── Classification
 │   │       └── Regression
 │   └── Practical Applications
 │       ├── Mixed

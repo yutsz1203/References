@@ -1,4 +1,4 @@
-# Credit: https://github.com/patrickloeber/MLfromscratch/tree/master
+# Reference: https://www.youtube.com/watch?v=4swNt7PiamQ&list=PLqnslRFeH2Upcrywf-u2etjdxxkL8nl7E&index=2
 # Applicable to both simple lienar regression (one variable) and multiple linear regression (multiple regressions)
 import numpy as np
 
