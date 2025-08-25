@@ -1,3 +1,6 @@
+import datetime
+
+
 class Employee:
     # Class variables
     raise_amt = 1.04
@@ -12,23 +15,26 @@ class Employee:
         self.email = f"{first}.{last}@company.com"
 
         Employee.num_of_emps += 1
+
     # Instance method
     # automatically takes the self, instance, as the argument
     # access to instance variables
 
     def getName(self):
         print(f"{self.first} {self.last}")
-    
+
     def apply_raise(self):
-        self.pay = int(self.pay * self.raise_amount) # self.raise_amount or Employee.raise_amount works as well
-    
+        self.pay = int(
+            self.pay * self.raise_amount
+        )  # self.raise_amount or Employee.raise_amount works as well
+
     # Class method
     # automatically takes the cls, class, as the argument
-    # access to class variables 
+    # access to class variables
     @classmethod
     def set_raise_amt(cls, amount):
         cls.raise_amt = amount
-    
+
     @classmethod
     # alternative constructor using classmethod
     def from_string(cls, emp_str):
@@ -45,14 +51,14 @@ class Employee:
 
 
 # These are instances
-emp_1 = Employee("Mervin","Yu", 50000)
+emp_1 = Employee("Mervin", "Yu", 50000)
 emp_2 = Employee("Corey", "Schafer", 60000)
 
 Employee.set_raise_amt(0.99)
 print(Employee.raise_amt)
-print(emp_1.raise_amt)  
+print(emp_1.raise_amt)
 
-emp_1.set_raise_amt(1.05) # this also changes the class variable
+emp_1.set_raise_amt(1.05)  # this also changes the class variable
 print(Employee.raise_amt)
 print(emp_1.raise_amt)
 
@@ -60,8 +66,6 @@ emp_str_1 = "John-Doe-70000"
 new_emp_1 = Employee.from_string(emp_str_1)
 print(new_emp_1.email)
 
-import datetime
 my_date = datetime.date(2016, 7, 10)
 
 print(Employee.is_workday(my_date))
- 

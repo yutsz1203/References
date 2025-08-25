@@ -1,5 +1,4 @@
 # Reference: https://www.youtube.com/watch?v=yxa-DJuuTBI
-import os
 from pathlib import Path
 
 # Get current directory
@@ -63,7 +62,7 @@ for p in dotfiles.glob("*.json"):
 try:
     with open(dotfiles) as f:
         print(f.read())
-    
+
 except FileNotFoundError:
     print("File not found.")
 
