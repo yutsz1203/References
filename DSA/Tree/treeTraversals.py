@@ -138,7 +138,7 @@ def postorderReversePreorder(root: TreeNode) -> list[int]:
         else:
             cur = stack.pop()
             cur = cur.left
-        res.reverse()
+    res.reverse()
 
     return res
 

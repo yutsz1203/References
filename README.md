@@ -16,15 +16,16 @@ References
 │   └── Tree
 │
 ├── Machine Learning
-│   ├── Models From Scratch
-│   │   └── Supervised Learning
-│   │       └── Classification
-│   │       └── Regression
+│   ├── Applications
+│   │      └── Mixed
+│   │      └── Supervised Learning
+│   │      └── Regression
 │   │
-│   └── Practical Applications
-│       ├── Mixed
-│       └── Supervised Learning
-│           └── Regression
+│   └── Models
+│          └── Supervised Learning
+│          └── Classification
+│          └── Regression
+│
 ├── OOP
 │
 └── Python
@@ -32,5 +33,6 @@ References
     │   └── datetime
     │   └── os
     │   └── pathlib
+    │
     └── File Objects
 ```
