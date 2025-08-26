@@ -72,12 +72,8 @@ def inorderTraversalRecursive(root: TreeNode):
 # Iterative with one stack
 # Reference: https://leetcode.com/problems/binary-tree-postorder-traversal/solutions/5669641/binary-tree-postorder-traversal/
 def postorderTraversalIterativeOneStack(root: TreeNode) -> list[int]:
-    res = []
-
-    if root is None:
-        return res
-
     stack = []
+    res = []
     prev = None
 
     while root or stack:
@@ -86,10 +82,7 @@ def postorderTraversalIterativeOneStack(root: TreeNode) -> list[int]:
             root = root.left
         else:
             root = stack[-1]
-
-            if (
-                root.right is None or root.right == prev
-            ):  # root.right == prev when all nodes of right subtree have been processed, at original root for example
+            if root.right is None or prev == root.right:
                 res.append(root.val)
                 stack.pop()
                 prev = root
@@ -155,4 +148,42 @@ def postorderTraversalRecursive(root: TreeNode) -> list[int]:
         res.append(root.val)
 
     postorder(root)
+    return res
+
+
+# Preorder Traversal
+# Root -> Left -> Right
+# Produce list of node vals preorder
+
+
+# Iterative
+# Reference: https://www.youtube.com/watch?v=afTpieEZXck&forced
+def preorderTraversalIterative(root: TreeNode) -> list[int]:
+    stack = []
+    res = []
+    cur = root
+
+    while cur or stack:
+        if cur:
+            res.append(cur.val)
+            stack.append(cur.right)
+            cur = cur.left
+        else:
+            cur = stack.pop()
+
+    return res
+
+
+# Recursive
+def preorderTraversalRecursive(root: TreeNode) -> list[int]:
+    res = []
+
+    def preorder(root):
+        if root is None:
+            return
+        res.append(root.val)
+        preorder(root.left)
+        preorder(root.right)
+
+    preorder(root)
     return res
