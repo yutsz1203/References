@@ -80,5 +80,3 @@ if __name__ == "__main__":
     ax.set_ylim([ymin - 3, ymax + 3])
 
     plt.show()
-
-    print(X_test)

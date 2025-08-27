@@ -211,3 +211,6 @@ directory-structure.md
 
 # Vscode file
 .vscode/
+
+# c++ executable
+*.exe

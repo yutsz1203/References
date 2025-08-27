@@ -1,6 +1,5 @@
 /* 
 Reference: 
-https://www.programiz.com/cpp-programming/type-conversion-operators
 https://www.programiz.com/cpp-programming/type-conversion
 
 C++ is a statically typed langauge, which means that is uses static styping to determine data types and
@@ -35,11 +34,6 @@ int main(){
     cout << "num_double = " << num_double << endl; // 9.99
 
     // Explicit Conversion
-    // C++ Named Casts
-    // static_cast
-    float my_float = 3.14;
-    int my_int = static_cast<int>(my_float); // float -> int
-    cout << "Float: " << my_float << " -> Int: " << my_int << endl;
 
     // C-style Type Casting
     num_double = (double)num_int;
