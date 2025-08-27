@@ -75,20 +75,21 @@ def postorderTraversalIterativeOneStack(root: TreeNode) -> list[int]:
     stack = []
     res = []
     prev = None
+    cur = root
 
-    while root or stack:
-        if root:
-            stack.append(root)
-            root = root.left
+    while cur or stack:
+        if cur:
+            stack.append(cur)
+            cur = cur.left
         else:
-            root = stack[-1]
-            if root.right is None or prev == root.right:
-                res.append(root.val)
+            cur = stack[-1]
+            if cur.right is None or prev == cur.right:
+                res.append(cur.val)
                 stack.pop()
-                prev = root
-                root = None
+                prev = cur
+                cur = None
             else:
-                root = root.right
+                cur = cur.right
 
     return res
 
