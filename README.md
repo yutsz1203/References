@@ -16,6 +16,9 @@ References
 ├── DSA
 │   └── Tree
 │
+├── General
+│   └── Regex
+│
 ├── Machine Learning
 │   ├── Applications
 │   │      └── Mixed
@@ -34,6 +37,8 @@ References
     │   └── datetime
     │   └── os
     │   └── pathlib
+    │   └── re
+    │   └── time
     │
     └── File Objects
 ```
