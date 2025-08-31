@@ -5,31 +5,35 @@
 
 ## Characters
 
-- \d: Any Digit (0-9)
-- \D: Any Non-digit character
-- \w: ASCII letter, digit, or underscore
-- \W: Any non word characters (Special characters)
+- \d: Digit (0-9)
+- \D: Not a Digit
+- \w: Word Character (a-z, A-z, 0-9, \_)
+- \W: Not a word character
 - \s: Any whitespace characters (Space, tab, newline, carriage return, vertical tab)
 - \S: Any character that is not whitespace characters
 
+## MetaCharacters (Need to be escaped)
+
+. ^ $ \* + ? { } [ ] \ | ( )
+
 ## Quantifiers
 
-- +: One or more
+- +: 1 or more
   - .+: One or more any character
-- \*: Zero or more
+- \*: 0 or more
   - a\*: Zero or more "a"(s)
-- ?: Optional (Once or none)
+- ?: 0 or One
   - plurals?: matches plural and plurals
-- {3}: Exactly three times
+- {3}: Exactly Number
   - a{3}: matches aaa
-- {2,4}: Two to four times
+- {2,4}: Range of Numbers (Minimum, Maximum)
   - a{2-4}: matches aa, aaa, aaaa
-- {3, }: Three or more times
+- {3, }: Number or more times
   - a{3, }: matches aaa, aaaa
 
 ## More Characters
 
-- . : Wildcard. Any character except line break
+- . : Wildcard. Any character except new line
 
 ## More Whitespaces
 
@@ -39,7 +43,7 @@
 
 ## Character Classes
 
-- [...]: Match specific characters, inside the square bracket
+- [...]: Match specific characters, inside the square bracket (Does not need to escape characters inside the square bracket)
 - [x-y]: Match one of the characters in the range from x to y
 - [^x]: One character that is not x
 
@@ -49,6 +53,7 @@
 - $: End of string
 - \b: Word boundary, where one side only is an ASCII letter, digit or underscore
   - Bob.\*\bcat\b: matches Bob ate the cat
+- \B: Not a word boundary
 
 ## Logic
 
@@ -62,6 +67,10 @@
   - ^(IMG(\d+))\.png$: matches both the file name and the digits in the file name
 - |: OR
   - I love (cats|dogs): matches "I love cats" and "I love dogs"
+
+## Common regex
+
+- Email addresses: [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
 
 ## Resources
 
