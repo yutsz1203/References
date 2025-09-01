@@ -125,19 +125,19 @@ with open("Python/Built-in Modules/re/data.txt", "r") as f:
 
     for match in matches:
         print(match)
-
+print("*" * 90)
 """
 re methods
 """
 
 # re.findall: return all non-overlapping matches of pattern in string, as a list of strings or tuples
-pattern = re.compile(r"(Mr|Ms|Mrs)\.?\s[A-Z]\w*")
-matches = pattern.findall(text_to_search)
-print("re.findall examples")
-print(f"Pattern: {pattern.pattern}\n")
-
-for match in matches:
-    print(match)
+str = "purple alice@google.com, blah monkey bob@abc.com blah dishwasher"
+tuples = re.findall(r"([\w\.-]+)@([\w\.-]+)", str)
+print("re.findall() examples")
+print(tuples)  ## [('alice', 'google.com'), ('bob', 'abc.com')]
+for tuple in tuples:
+    print(tuple[0])  ## username
+    print(tuple[1])  ## host
 print("*" * 90)
 
 # re.match: if the beginning of string match the regex, return a corresponding Match object.
@@ -152,6 +152,6 @@ matches = pattern.search(sentence)
 print(matches)
 
 # Flags
-pattern = re.compile(r"start")  # I for ignorecase
+pattern = re.compile(r"start", re.I)  # I for ignorecase
 matches = pattern.search(sentence)
 print(matches)

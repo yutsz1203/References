@@ -7,6 +7,7 @@ void swap(int a, int b){
 }
 
 int main(){
+    // lvalue references
     int val = 10;
     int& ref = val;
 
@@ -22,6 +23,20 @@ int main(){
     swap(x, y);
  
     std::cout << "After swapping: " << x << " " << y << std::endl; // 2 1
+
+    // lvalue references to const
+    const int c1 = 1;
+    const int& constref1 = c1;
+
+    int c2 = 2;
+    const int& constref2 = c2;
+
+    // lvalue reference to const with an rvalue
+    const int& ref = 5;
+
+    // lvalue reference to const with value of a different type
+    char c = 'a';
+    const int& r2 = c; // 97
 
     return 0;
 }
