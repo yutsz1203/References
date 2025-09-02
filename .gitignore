@@ -212,5 +212,8 @@ directory-structure.md
 # Vscode file
 .vscode/
 
-# c++ executable
+# c++ 
 *.exe
+
+# Java
+*.class

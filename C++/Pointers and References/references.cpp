@@ -1,9 +1,30 @@
+// Lvalues: those that evaluate to functions or identifiable objects (including variables) that persist beyond the end of the expression.
+// Rvalues: those that evaluate to values, including literals and temporary objects that do not persist beyond the end of the expression.
+// pass by reference can avoid making an expensive copy of an argument when calling a function
+// pass by reference to non-const allows us to write functions that modify the value of arguments passed in
+
+/*
+Pass by value: fundamental types and enumerated types
+Pass by const reference: Class types, and when not sure what to do
+Pass by reference: Need modify values
+*/
 #include <iostream>
 
-void swap(int a, int b){
+// only accept non-const lvalues here
+void swap(int& a, int& b){
     int temp = a;
     a = b;
     b = temp;
+}
+
+// accept moddifiable lvalues, non-modifiable lvalues, and rvalues.
+void printRef(const int& y){
+    std::cout << y << '\n';
+}
+
+// string parameter, std::string_view is the string version of pass by reference, >= c++14 
+void doSomething(const std::string_view){
+    return;
 }
 
 int main(){
@@ -32,11 +53,13 @@ int main(){
     const int& constref2 = c2;
 
     // lvalue reference to const with an rvalue
-    const int& ref = 5;
+    const int& r1 = 5;
 
     // lvalue reference to const with value of a different type
     char c = 'a';
-    const int& r2 = c; // 97
+    const int& r2 = c;
+
+    printRef(r2); // 97
 
     return 0;
 }
