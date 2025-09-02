@@ -29,14 +29,14 @@ References
 │
 ├── Machine Learning
 │   ├── Applications
-│   │      └── Mixed
-│   │      └── Supervised Learning
-│   │      └── Regression
+│   │   └── Mixed
+│   │   └── Supervised Learning
+│   │   └── Regression
 │   │
 │   └── Models
-│          └── Supervised Learning
-│          └── Classification
-│          └── Regression
+│       └── Supervised Learning
+│       └── Classification
+│       └── Regression
 │
 ├── OOP
 │
