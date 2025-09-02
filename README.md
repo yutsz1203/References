@@ -18,6 +18,14 @@ References
 │
 ├── General
 │   └── Regex
+│   
+├── Java
+│   └── basics
+│   └── collections
+│   └── exception
+│   └── generics
+│   └── nested_class
+│   └── OOP
 │
 ├── Machine Learning
 │   ├── Applications
@@ -41,4 +49,5 @@ References
     │   └── time
     │
     └── File Objects
+
 ```
