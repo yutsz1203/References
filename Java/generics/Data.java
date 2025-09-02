@@ -18,4 +18,15 @@ public class Data <CustomType>{
     }
 }
 
+/*
+ * Multiple type parameters are also possible
+ * public class Data<CustomTypeA, CustomTypeB> {
+ *      public CustomTypeA dataA;
+ *      public CustomTypeB dataB;
+ * }
+ * 
+ * Data<String, Integer> s = new Data<String, Integer>();
+ * 
+ */
+
 
