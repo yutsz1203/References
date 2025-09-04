@@ -14,11 +14,12 @@ References
 │   └── Type Conversion
 │
 ├── DSA
+│   └── Searching
 │   └── Tree
 │
 ├── General
 │   └── Regex
-│   
+│  
 ├── Java
 │   └── basics
 │   └── collections

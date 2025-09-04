@@ -24,6 +24,7 @@ class Solution:
 
             if node.right:
                 q.append(node.right)
-                res.append(curr_level)
+
+            res.append(curr_level)
 
         return res
