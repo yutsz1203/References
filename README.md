@@ -15,7 +15,9 @@ References
 │
 ├── DSA
 │   ├── DataStructures
+│   │   └── BitManipulation
 │   │   └── DisjointSet
+│   │
 │   └── Searching
 │   └── Tree
 │
