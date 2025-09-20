@@ -14,11 +14,11 @@ References
 │   └── Type Conversion
 │
 ├── DSA
+│   └── BitManipulation
 │   ├── DataStructures
-│   │   └── BitManipulation
 │   │   └── DisjointSet
-│   │   └── DP
 │   │
+│   └── DP
 │   └── Searching
 │   └── Tree
 │

@@ -1,3 +1,4 @@
+# BFS traverses at a selected node and explores all its neighboring nodes at the current depth level before moving on to nodes at the next level, using a queue.
 # 102. Binary Tree Level Order Traversal
 from collections import deque
 

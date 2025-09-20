@@ -1,3 +1,4 @@
+# DFS traverses at a selected node and explores as deep as possible down one path before backtracking, using a stack.
 # Leetcode 104. Maximum Depth of Binary Tree
 from Tree import TreeNode
 
